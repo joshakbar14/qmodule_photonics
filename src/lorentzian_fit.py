@@ -13,8 +13,12 @@ xmin, xmax = 1530, 1560
 N = 1000
 X = np.linspace(xmin, xmax, N)
 Y = gauss(X, known_param)
+Yb = gauss(X, np.array([1542, 1.0]))
+
+# G = Y + Yb
+
 # Add some noise
-Y += .30*np.random.random(N)
+Y += .05*np.random.random(N)
 
 fitting = LorentzianCurveFit(X,Y)
 fitting.fit()
