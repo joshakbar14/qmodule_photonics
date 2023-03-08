@@ -15,7 +15,7 @@ Y = gauss(X, known_param)
 # Add some noise
 Y += .30*np.random.random(N)
 plt.subplot(221)
-plt.ylim(0, 0.7)
+plt.ylim(0, 0.9)
 plt.plot(Y)
 
 Yf = fft.ifft(Y)
@@ -33,6 +33,6 @@ plt.subplot(224)
 plt.plot(B)
 
 plt.subplot(223)
-plt.ylim(0, 0.7)
+plt.ylim(0, 0.9)
 plt.plot(Bf)
 plt.show()
